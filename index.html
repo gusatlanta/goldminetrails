@@ -264,6 +264,34 @@
   .contact .ways a:hover { background: color-mix(in srgb, var(--on-moss) 12%, transparent); }
   .contact .ways svg { width: 20px; height: 20px; }
 
+  /* ---- Nearby ---- */
+  .nearby-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; margin-top: 2rem; }
+  @media (max-width: 720px) { .nearby-grid { grid-template-columns: 1fr; } }
+  .nearby h2 { margin: .5rem 0 .6rem; }
+  .nearby p.intro { color: var(--ink-soft); max-width: 56ch; }
+  .place { border-top: 3px solid var(--moss); padding-top: .9rem; }
+  .place h3 { margin-bottom: .2rem; }
+  .place .drive { font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--clay); margin-bottom: .6rem; font-variant-numeric: tabular-nums; }
+  .place ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .55rem; }
+  .place li { color: var(--ink-soft); font-size: .95rem; line-height: 1.5; }
+  .place li strong { color: var(--ink); font-weight: 600; }
+  .highway {
+    margin-top: 2.2rem; border-radius: 16px; padding: 1.8rem 2rem;
+    background: color-mix(in srgb, var(--sun) 16%, var(--surface));
+    border: 2px solid var(--sun);
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr); gap: 1.5rem 2.5rem; align-items: start;
+  }
+  @media (max-width: 760px) { .highway { grid-template-columns: 1fr; padding: 1.4rem 1.3rem; } }
+  .highway .eyebrow { color: var(--clay); }
+  .highway h3 { font-size: 1.6rem; font-variation-settings: "opsz" 48; margin: .3rem 0 .7rem; }
+  .highway p { color: var(--ink); max-width: 58ch; }
+  .highway p + p { margin-top: .7rem; }
+  .highway dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: .45rem .9rem; font-size: .95rem; align-content: start; }
+  .highway dt { color: var(--ink-soft); }
+  .highway dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .source { font-size: .8rem; color: var(--ink-soft); margin-top: 1rem; }
+  .source a { color: var(--ink-soft); }
+
   footer {
     padding: 2rem 0 2.5rem; color: var(--ink-soft); font-size: .88rem;
     display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
@@ -289,6 +317,7 @@
       <a href="#land">The land</a>
       <a href="#photos">Photos</a>
       <a href="#details">Details</a>
+      <a href="#nearby">Nearby</a>
       <a href="#contact">Inquire</a>
     </nav>
   </div>
@@ -391,16 +420,65 @@
             <div><strong>Already cared for</strong><span>Trails mowed, pasture cut, a barn in place. You can walk it the day you close.</span></div>
           </li>
         </ul>
-        <p class="intro" style="margin-top:1.6rem;font-size:.88rem;">Buyers should verify boundaries, zoning, and utilities with Forsyth County.</p>
+        <p class="intro" style="margin-top:1.6rem;font-size:.88rem;">Buyers should verify boundaries, zoning, and utilities with Cherokee County.</p>
       </div>
       <div>
         <p class="eyebrow">Where</p>
-        <p class="address">568 Franklin Goldmine Road<br>Cumming, GA 30028<small>Forsyth County, north of Atlanta. Look for the gravel drive off Franklin Goldmine Road.</small></p>
+        <p class="address">568 Franklin Goldmine Road<br>Cumming, GA 30028<small>Cherokee County, north of Atlanta. Look for the gravel drive off Franklin Goldmine Road.</small></p>
         <div class="actions map-note">
           <a class="btn btn-moss" href="https://www.google.com/maps/dir/?api=1&destination=568+Franklin+Goldmine+Rd,+Cumming,+GA+30028" target="_blank" rel="noopener">Open in Google Maps</a>
           <a class="btn btn-outline" href="https://maps.apple.com/?daddr=568+Franklin+Goldmine+Rd,+Cumming,+GA+30028" target="_blank" rel="noopener">Open in Apple Maps</a>
         </div>
         <figure style="margin-top:1.8rem;"><img src="images/img_0246.jpg" loading="lazy" alt="The front pasture along the road, freshly mowed, with the gravel drive to the right."><figcaption>The front pasture along Franklin Goldmine Road.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="nearby" class="nearby">
+    <div class="wrap">
+      <p class="eyebrow">Nearby</p>
+      <h2>Good schools, a top-100 golf course, and a bigger road on the way.</h2>
+      <p class="intro">The property sits in the Free Home community of eastern Cherokee County, between Canton and Cumming. Drive times below are from Google Maps.</p>
+
+      <div class="nearby-grid">
+        <div class="place">
+          <h3>Schools</h3>
+          <p class="drive">Cherokee County School District</p>
+          <ul>
+            <li><strong>Free Home Elementary</strong> &middot; 8 minutes, about 4 miles. A brand-new campus that opened in August 2025, built for up to 850 students on 40 acres. Rated 7 out of 10 by GreatSchools.</li>
+            <li><strong>Creekland Middle School</strong> &middot; Canton. Rated 7 out of 10 by GreatSchools.</li>
+            <li><strong>Creekview High School</strong> &middot; Canton. Ranked 63rd of Georgia's high schools by U.S. News for 2026, with state championships in softball and wrestling and a rocketry team that won nationals in 2018.</li>
+          </ul>
+          <p class="source">Confirm current attendance zones with the <a href="https://www.cherokeek12.net/maps" target="_blank" rel="noopener">Cherokee County School District</a>.</p>
+        </div>
+
+        <div class="place">
+          <h3>Hawks Ridge Golf Club</h3>
+          <p class="drive">9 minutes &middot; about 4 miles</p>
+          <ul>
+            <li>A private, invitation-only club in Ball Ground with 27 holes designed by Bob Cupp, who called it his finest work.</li>
+            <li>550 acres of rolling Cherokee County land, and a regular on Golf Digest's list of America's 100 Greatest Golf Courses since it opened in 1999.</li>
+          </ul>
+          <p class="source"><a href="https://www.hawksridge.com/" target="_blank" rel="noopener">hawksridge.com</a></p>
+        </div>
+      </div>
+
+      <div class="highway">
+        <div>
+          <p class="eyebrow">Highway 20 expansion</p>
+          <h3>Six lanes from Canton to Cumming, and the closest stretch starts this summer.</h3>
+          <p>The Georgia DOT is widening Highway 20, the Cumming Highway, from two lanes to six along the 20 miles between I-575 in Canton and Cumming. Each finished segment gets three lanes each way, a 20-foot raised median, turn lanes, and sidewalks.</p>
+          <p>The segment from East Cherokee Drive to Highway 369, the piece nearest this property, was awarded to C.W. Matthews for $25.5 million. Construction begins summer 2026 and is scheduled to finish by July 2029. The stretches from I-575 to Union Hill Road are already complete. When it is done, the run to I-575, Canton, and GA 400 gets faster and safer, and land along the corridor rarely gets cheaper.</p>
+          <p class="source">Sources: <a href="https://www.tribuneledgernews.com/local_news/work-starts-soon-to-widen-more-of-highway-20-in-cherokee/article_9231a24a-e02f-48d8-81de-f212b8e12e65.html" target="_blank" rel="noopener">Cherokee Tribune, April 2026</a> and <a href="https://sr20improvements-gdot.hub.arcgis.com/" target="_blank" rel="noopener">GDOT SR 20 Improvements</a>.</p>
+        </div>
+        <dl>
+          <dt>Corridor</dt><dd>I-575 to Cumming, 20 miles</dd>
+          <dt>Final width</dt><dd>6 lanes, raised median</dd>
+          <dt>Nearest segment</dt><dd>East Cherokee Dr to Hwy 369</dd>
+          <dt>Contract</dt><dd>$25.5 million</dd>
+          <dt>Starts</dt><dd>Summer 2026</dd>
+          <dt>Finishes</dt><dd>July 2029</dd>
+        </dl>
       </div>
     </div>
   </section>
